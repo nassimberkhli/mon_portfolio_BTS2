@@ -1,3 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.animation_introduction {
+  background-color: rgb(251, 217, 190);
+  padding-bottom: 170px;
+}
+
 .bonjour {
   width: 400px;
   height: 300px;
@@ -37,13 +46,13 @@
 .soulignement, .header > a::after, .introduction__phrase > span::after {
   display: block;
   position: absolute;
-  background-color: #80D39B;
+  background-color: rgb(202, 202, 202);
   transform: scaleX(0);
   z-index: -2;
 }
 
 .border-color {
-  border: #04052E solid 3px;
+  border: rgb(37, 48, 112) solid 3px;
   border-top-style: none;
   border-right-style: none;
   border-bottom-style: none;
@@ -51,7 +60,7 @@
 
 .introduction__phrase, .header > a, .bonjour > h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: #04052E;
+  color: rgb(37, 48, 112);
 }
 
 .introduction {
@@ -84,11 +93,11 @@
   animation: soulignement 1s 3s forwards;
 }
 .introduction__phrase--1 {
-  transform: translateX(110%);
+  transform: translateX(115%);
   animation: lancement_introduction_1 1.5s 1.3s forwards;
 }
 .introduction__phrase--2 {
-  transform: translateX(-110%);
+  transform: translateX(-115%);
   animation: lancement_introduction_2 1.5s 1.8s forwards;
 }
 
@@ -102,7 +111,7 @@
 }
 @keyframes lancement_introduction_2 {
   0% {
-    transform: translateX(-110%);
+    transform: translateX(-115%);
   }
   50% {
     transform: translateX(10%);
@@ -115,7 +124,7 @@
 }
 @keyframes lancement_introduction_1 {
   0% {
-    transform: translateX(110%);
+    transform: translateX(115%);
   }
   50% {
     transform: translateX(-10%);
