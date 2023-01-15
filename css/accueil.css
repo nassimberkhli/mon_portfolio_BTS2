@@ -2,6 +2,7 @@
   * {
     color: white;
   }
+ button{opacity: 0;}
   .header::after {
     content: "Mon portfolio est disponible seulement en format ordinateur, ll sera disponible sur ce type de format prochainement";
     background-color: #B61E16;
@@ -12,7 +13,7 @@
 @media screen and (min-width: 1200px) {
   html {
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
     animation: scroll 0s 4s forwards;
   }
   @keyframes scroll {
@@ -20,7 +21,7 @@
       overflow-y: hidden;
     }
     to {
-      overflow-y: hidden;
+      overflow-y: visible;
     }
   }
   body::-webkit-scrollbar {
