@@ -1,0 +1,490 @@
+@media screen and (max-width: 1199px) {
+  * {
+    color: white;
+  }
+  .header::after {
+    content: "Mon portfolio est disponible seulement en format ordinateur, ll sera disponible sur ce type de format prochainement";
+    background-color: #B61E16;
+    display: block;
+    height: 50px;
+  }
+  button, img {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    animation: scroll 0s 4s forwards;
+  }
+  @keyframes scroll {
+    from {
+      overflow-y: hidden;
+    }
+    to {
+      overflow-y: visible;
+    }
+  }
+  body::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+    border-radius: 20px;
+  }
+  body::-webkit-scrollbar-track {
+    background-color: white; /* color of the tracking area */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #FF7F11;
+  }
+  .animation_introduction {
+    padding-bottom: 150px;
+  }
+  .bonjour {
+    width: 400px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    transform: scale(0);
+    animation: lancement_scale 0.8s 0.5s;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: rgb(37, 48, 112);
+  }
+  .bonjour > h1 {
+    font-size: 100px;
+  }
+  @keyframes lancement_scale {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.3);
+      transition-timing-function: ease-out;
+    }
+    70%, 100% {
+      transform: scale(1);
+      transition-timing-function: ease-in;
+    }
+  }
+  .soulignement, .header > a::after, .introduction__phrase > span::after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    transform: scaleX(0);
+    z-index: -2;
+  }
+  .introduction__phrase, section > h1, .block_h2 > h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: rgb(37, 48, 112);
+    font-weight: 100;
+  }
+  .introduction {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98.5%;
+    height: 50%;
+    transform: translate(0%, 60%);
+    padding-top: 30px;
+  }
+  .introduction__phrase {
+    margin-top: -40px;
+    font-size: 60px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    height: 47%;
+    padding-left: 1x;
+    position: relative;
+    z-index: -1;
+  }
+  .introduction__phrase > span {
+    position: relative;
+    margin-left: 12px;
+  }
+  .introduction__phrase > span::after {
+    content: "";
+    background-color: #FF7F11;
+    position: absolute;
+    margin-top: 60px;
+    transform-origin: 0% 50%;
+    transform: scaleX(0);
+    height: 4px;
+    animation: soulignement 1s 3s forwards;
+  }
+  .introduction__phrase--1 {
+    transform: translateX(115%);
+    animation: lancement_introduction_1 1.5s 1.3s forwards;
+  }
+  @keyframes lancement_introduction_1 {
+    0% {
+      transform: translateX(115%);
+    }
+    50% {
+      transform: translateX(-10%);
+      transition-timing-function: ease-out;
+    }
+    100% {
+      transform: translateX(0);
+      transition-timing-function: ease-in;
+    }
+  }
+  .introduction__phrase--2 {
+    transform: translateX(-115%);
+    animation: lancement_introduction_2 1.5s 1.8s forwards;
+  }
+  @keyframes lancement_introduction_2 {
+    0% {
+      transform: translateX(-115%);
+    }
+    50% {
+      transform: translateX(10%);
+      transition-timing-function: ease-out;
+    }
+    100% {
+      transform: translateX(0);
+      transition-timing-function: ease-in;
+    }
+  }
+  @keyframes soulignement {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  .barre_entete {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+  .header {
+    border: #FF7F11 solid 8px;
+    background-color: rgb(37, 48, 112);
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0px 30px 0px;
+    transform: translateX(-110%);
+    animation: lancement_entete 1s 3s linear forwards;
+  }
+  .header > a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 10ms;
+    position: relative;
+  }
+  .header > a:hover::after {
+    transform: scaleX(1);
+  }
+  .header > a::after {
+    content: "";
+    background-color: #FF7F11;
+    transform-origin: 0% 50%;
+    transition: transform 1s;
+    margin-top: 15px;
+    height: 12px;
+  }
+  @keyframes lancement_entete {
+    0% {
+      transform: translateX(-110%);
+    }
+    20% {
+      transform: translateX(0%);
+      transition-timing-function: ease-in;
+    }
+    40% {
+      transform: translateX(-2%);
+      transition-timing-function: ease-out;
+    }
+    60% {
+      transform: translateX(0%);
+      transition-timing-function: ease-in;
+    }
+    80% {
+      transform: translateX(-0.5%);
+      transition-timing-function: ease-out;
+    }
+    100% {
+      transform: translateX(0%);
+      transition-timing-function: ease-in;
+    }
+  }
+  section {
+    padding-top: 95px;
+    position: relative;
+  }
+  section > h1 {
+    font-weight: 100;
+    font-size: 35px;
+    text-decoration: underline #FF7F11;
+  }
+  .a_propos_de_moi {
+    top: 110px;
+    width: 90%;
+  }
+  .a_propos_de_moi__contenu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  .a_propos_de_moi__contenu__paragraphe {
+    color: white;
+    background-color: rgb(37, 48, 112);
+    font-size: 20px;
+    width: 50%;
+    padding: 24px;
+    border-radius: 13px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+  }
+  .a_propos_de_moi__contenu__mon_cv {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    border: rgb(37, 48, 112) solid 2px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: rgb(37, 48, 112);
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .a_propos_de_moi__contenu__mon_cv:not(:hover) {
+    transition: 2.5s;
+  }
+  .a_propos_de_moi__contenu__mon_cv::after {
+    content: "";
+    transform: scaleX(0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #FF7F11;
+    color: white;
+    position: absolute;
+    top: 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: -1;
+    transform-origin: 0% 50%;
+  }
+  .a_propos_de_moi__contenu__mon_cv:hover {
+    border-color: white;
+  }
+  .a_propos_de_moi__contenu__mon_cv:hover > p {
+    color: white;
+  }
+  .a_propos_de_moi__contenu__mon_cv:hover::after {
+    transform: scaleX(1);
+  }
+  .mes_experiences {
+    top: 110px;
+    width: 100%;
+    height: 2000px;
+  }
+  .mes_experiences__type {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 130px;
+  }
+  .mes_experiences__type__generale {
+    width: 85%;
+    height: 35%;
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 20px;
+  }
+  .mes_experiences__type__generale__liste__info {
+    background-color: rgb(37, 48, 112);
+  }
+  .mes_experiences__type__generale > .block_h2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+    font-size: 18px;
+  }
+  .mes_experiences__type__generale > .block_h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: rgb(37, 48, 112);
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    transform-origin: 50% 50%;
+    transform: scale(0);
+  }
+  .mes_experiences__type__generale > .block_h2:not(:hover) {
+    transform: translateY(0%);
+    animation: titre_experiences_saut 1.5s;
+    animation-delay: 5s;
+  }
+  .mes_experiences__type__generale > .block_h2:not(:hover)::after {
+    animation: titre_transforme_boule 0.7s 5s;
+  }
+  @keyframes titre_transforme_boule {
+    0% {
+      transform: scale(0);
+    }
+    1%, 99% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  .mes_experiences__type__generale > .block_h2:not(:hover) > h2 {
+    animation: titre_experiences_etirement 6s;
+  }
+  @keyframes titre_experiences_saut {
+    0% {
+      transform: translateY(0%);
+      transition-timing-function: linear;
+    }
+    30% {
+      transform: translateY(-80%);
+      transition-timing-function: ease;
+    }
+    50% {
+      transform: translateY(0%);
+      transition-timing-function: ease-in;
+    }
+    55% {
+      transform: translateY(-5%);
+      transition-timing-function: ease-out;
+    }
+    56%, 100% {
+      transform: translateY(0%);
+      transition-timing-function: ease-in;
+    }
+  }
+  @keyframes titre_experiences_etirement {
+    0% {
+      letter-spacing: 0px;
+      transition-timing-function: cubic-bezier(0.08, 0.14, 0.09, 1);
+    }
+    80% {
+      letter-spacing: 15px;
+      transition-timing-function: cubic-bezier(0.91, 0.09, 0.93, 0.64);
+    }
+    85%, 95% {
+      letter-spacing: -12px;
+    }
+    100% {
+      letter-spacing: 0px;
+    }
+  }
+  .mes_experiences__type__generale__liste {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .mes_experiences__type__generale__liste__tout {
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 10px 10px 5px 1px rgba(106, 106, 113, 0.2);
+    transition: 0.5s;
+  }
+  .mes_experiences__type__generale__liste__tout:hover > div {
+    transform: translateY(0%);
+  }
+  .mes_experiences__type__generale__liste__tout:hover {
+    transform: scale(1.2);
+    box-shadow: 20px 20px 5px 1px rgba(106, 106, 113, 0.2);
+  }
+  .mes_experiences__type__generale__liste__tout > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: white;
+    transform: translateY(103%);
+    transition: 0.5s;
+  }
+  .mes_experiences__type__generale__liste__tout > div > div {
+    background-color: transparent;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 7px;
+    top: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    border-radius: 40px;
+  }
+  .mes_experiences__type__generale__liste__tout > div > div::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: white;
+    width: 80%;
+    height: 10%;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+  .mes_experiences__type__generale__liste__tout > div > div::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: white;
+    width: 11%;
+    height: 80%;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+  .mes_experiences__type__generale__liste__tout > div > div:hover {
+    transform: rotate(180deg);
+  }
+  .mes_experiences__type__mission__liste--Way {
+    background-color: rgb(37, 34, 45);
+  }
+  .mes_experiences__type__mission__liste--Way__info {
+    background-color: rgb(237, 42, 146);
+  }
+  .mes_experiences__type__mission__liste--Way__info__lien {
+    text-decoration: underline dashed;
+    color: white;
+  }
+  .mes_experiences__type__mission__liste--Way__info__lien:hover {
+    text-decoration: underline;
+  }
+  .mes_experiences__type__mission__liste--Aoip {
+    background-color: white;
+  }
+}
+
+/*# sourceMappingURL=accueil.css.map */
