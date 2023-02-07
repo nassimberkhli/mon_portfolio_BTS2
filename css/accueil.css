@@ -159,7 +159,7 @@
       transition-timing-function: ease-in;
     }
     100% {
-      transform: scale(0.3);
+      transform: scale(.7);
     }
   }
   .bouton__ouvrir_entete:hover {
