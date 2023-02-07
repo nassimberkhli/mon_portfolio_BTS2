@@ -15,7 +15,7 @@
 @media screen and (min-width: 700px) {
   html {
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
     animation: scroll 0s 9s forwards;
   }
   @keyframes scroll {
