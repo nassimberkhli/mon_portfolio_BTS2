@@ -397,6 +397,7 @@
     width: 100%;
     position: relative;
     background-position-x: left;
+    background: radial-gradient(circle, white 37.4%, #FF7F11 38%, white 38.6%);
   }
   section > h1 {
     font-weight: 100;
