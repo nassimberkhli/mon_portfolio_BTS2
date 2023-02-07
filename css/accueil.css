@@ -15,7 +15,7 @@
 @media screen and (min-width: 700px) {
   html {
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: visible;
     animation: scroll 0s 9s forwards;
   }
   @keyframes scroll {
@@ -54,7 +54,7 @@
     transform: scale(0);
     animation: lancement_bonjour 0.8s 0.5s;
     font-family: Georgia, "Times New Roman", Times, serif;
-    color: hsl(231deg, 50%, 29%);
+    color: rgb(31, 3, 104);
   }
   .bonjour > h1 {
     font-size: 100px;
@@ -78,7 +78,7 @@
     position: fixed;
     border: #FF7F11 solid 2px;
     background-color: #fff;
-    color: hsl(231deg, 50%, 29%);
+    color: rgb(31, 3, 104);
     display: flex;
     justify-content: space-evenly;
     padding: 30px 0px 30px 0px;
@@ -90,7 +90,7 @@
     transform: translateY(0%);
   }
   .header > a {
-    color: hsl(231deg, 50%, 29%);
+    color: rgb(31, 3, 104);
     text-decoration: none;
     font-size: 25px;
     transition: 10ms;
@@ -129,12 +129,13 @@
     height: 20px;
     background-size: 10px 10px;
     transform: rotate(-90deg);
-    left: 49.18%;
+    left: 50%;
     bottom: 1px;
   }
   .bouton__ouvrir_entete {
     width: 50px;
     height: 50px;
+    border: white solid 2px;
     border-radius: 50px;
     background-color: #FF7F11;
     display: flex;
@@ -186,13 +187,14 @@
     font-weight: 100;
   }
   section > h1, section > h2 {
-    color: hsl(231deg, 50%, 29%);
+    color: rgb(31, 3, 104);
   }
   .accueil {
     position: absolute;
     top: 0px;
     width: 100%;
     height: 575px;
+    background-color: white;
   }
   .accueil::before {
     content: "";
@@ -200,9 +202,9 @@
     height: 100%;
     background: linear-gradient(333deg, rgb(31, 3, 104) 55%, rgb(255, 127, 17) 99%);
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     transform: scaleX(0);
-    transform-origin: 0% 50%;
+    transform-origin: 0% 100%;
     animation: fond 1s 4.9s forwards;
   }
   @keyframes fond {
@@ -227,7 +229,7 @@
     position: relative;
     width: 45%;
     height: 100%;
-    color: hsl(231deg, 50%, 29%);
+    color: rgb(31, 3, 104);
     font-size: 25px;
     text-align: left;
     display: flex;
@@ -235,10 +237,11 @@
     align-items: center;
     justify-content: center;
     animation: couleur_phrases forwards 1s 4.9s;
+    z-index: 2;
   }
   @keyframes couleur_phrases {
     from {
-      color: hsl(231deg, 50%, 29%);
+      color: rgb(31, 3, 104);
     }
     to {
       color: #fff;
@@ -360,6 +363,7 @@
     font-weight: 100;
   }
   .introduction__image {
+    z-index: 2;
     transform: scale(0);
     width: 45%;
     height: 100%;
@@ -390,7 +394,9 @@
   }
   section {
     padding-top: 95px;
+    width: 100%;
     position: relative;
+    background-position-x: left;
   }
   section > h1 {
     font-weight: 100;
@@ -399,8 +405,9 @@
   }
   .a_propos_de_moi {
     top: 310px;
-    width: 90%;
+    width: 100%;
     position: relative;
+    padding-bottom: 60px;
   }
   .a_propos_de_moi__contenu {
     position: relative;
@@ -413,7 +420,7 @@
   }
   .a_propos_de_moi__contenu__paragraphe {
     color: white;
-    background-color: hsl(231deg, 50%, 29%);
+    background-color: rgb(31, 3, 104);
     padding: 0px 20px 0px 20px;
     border-radius: 13px;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
@@ -424,9 +431,9 @@
     position: relative;
     width: 250px;
     height: 200px;
-    border: hsl(231deg, 50%, 29%) solid 2px;
+    border: rgb(31, 3, 104) solid 2px;
     font-family: Georgia, "Times New Roman", Times, serif;
-    color: hsl(231deg, 50%, 29%);
+    color: rgb(31, 3, 104);
     font-size: 30px;
     display: flex;
     flex-direction: column;
@@ -485,7 +492,7 @@
     position: relative;
   }
   .mes_experiences__type__generale__liste__info {
-    background-color: hsl(231deg, 50%, 29%);
+    background-color: rgb(31, 3, 104);
   }
   .mes_experiences__type__generale__liste__tout {
     width: 30%;
@@ -626,7 +633,7 @@
   }
   .veille_technologique__contenu__definition__texte {
     color: white;
-    background-color: hsl(231deg, 50%, 29%);
+    background-color: rgb(31, 3, 104);
     padding: 0px 20px 0px 20px;
     border-radius: 13px;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
@@ -657,10 +664,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: hsl(231deg, 50%, 29%);
+    background-color: rgb(31, 3, 104);
     width: 50px;
     height: 50px;
     border-radius: 50px;
+    z-index: 2;
   }
   .veille_technologique__contenu__definition__bouton__fleche > img {
     position: absolute;
@@ -683,15 +691,16 @@
   .veille_technologique__contenu__definition__bouton__voir_plus {
     position: relative;
     font-size: 22px;
-    color: hsl(231deg, 50%, 29%);
+    color: rgb(31, 3, 104);
     right: 30px;
     transition-delay: 0.2s;
+    z-index: 2;
   }
   .veille_technologique__contenu__definition__bouton__before {
-    z-index: -1;
+    z-index: 1;
     display: block;
     position: absolute;
-    background-color: hsl(231deg, 50%, 29%);
+    background-color: rgb(31, 3, 104);
     width: 100%;
     height: 50px;
     border-radius: 50px;
@@ -718,7 +727,7 @@
     z-index: 5;
     top: 0%;
     background-color: rgb(245, 245, 245);
-    color: hsl(231deg, 50%, 29%);
+    color: rgb(31, 3, 104);
     transform: scale(0);
     transition: 0.5s;
     display: flex;
@@ -745,7 +754,7 @@
   .veille_technologique__contenu__cours__croix::after {
     content: "";
     display: block;
-    background-color: hsl(231deg, 50%, 29%);
+    background-color: rgb(31, 3, 104);
     width: 100%;
     height: 10%;
     position: absolute;
@@ -754,7 +763,7 @@
   .veille_technologique__contenu__cours__croix::before {
     content: "";
     display: block;
-    background-color: hsl(231deg, 50%, 29%);
+    background-color: rgb(31, 3, 104);
     width: 10%;
     height: 100%;
     position: absolute;
@@ -858,7 +867,7 @@
     list-style: none;
   }
   .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__cours__contenu__partie_3__texte > a {
-    color: hsl(231deg, 50%, 29%);
+    color: rgb(31, 3, 104);
     text-decoration: none;
     font-size: 26px;
     font-weight: 700;
@@ -890,11 +899,11 @@
     font-weight: 100;
     font-size: 35px;
     text-decoration: underline #FF7F11;
-    color: hsl(231deg, 50%, 29%);
+    color: rgb(31, 3, 104);
     text-align: center;
   }
   .me_contacter__contenu {
-    background-color: hsl(231deg, 50%, 29%);
+    background: linear-gradient(513deg, rgb(31, 3, 104) 55%, rgb(255, 127, 17) 99%);
     width: 100%;
     height: 100%;
     display: flex;
