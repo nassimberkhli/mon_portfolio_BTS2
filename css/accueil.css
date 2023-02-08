@@ -910,7 +910,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-radius: 20px;
+/*     border-radius: 20px; */
   }
   .me_contacter__contenu__info {
     display: flex;
