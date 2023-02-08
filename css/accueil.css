@@ -23,7 +23,7 @@
       overflow-y: hidden;
     }
     to {
-      overflow-y: visible;
+      overflow-y: hidden;
     }
   }
   body {
@@ -403,7 +403,7 @@
     text-decoration: underline #FF7F11;
   }
   .a_propos_de_moi {
-    top: 330px;
+    top: 350px;
     width: 100%;
     position: relative;
     padding-bottom: 60px;
