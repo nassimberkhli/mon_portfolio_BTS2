@@ -43,15 +43,16 @@
   .bonjour {
     width: 400px;
     height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 100px;
+    position: absolute;
+    right: 36%;
+    top: 5%;
     display: flex;
     align-items: center;
     transform: scale(0);
-    animation: lancement_bonjour 0.8s 0.5s;
+    animation: lancement_bonjour 1s 0.5s;
     font-family: Georgia, "Times New Roman", Times, serif;
     color: rgb(31, 3, 104);
+    z-index: 2;
   }
   .bonjour > h1 {
     font-size: 100px;
@@ -67,6 +68,205 @@
     }
     100% {
       transform: scale(0);
+    }
+  }
+  .accueil {
+    position: absolute;
+    top: 0px;
+    width: 102%;
+    height: 577px;
+    background-color: white;
+    left: 0px;
+  }
+  .accueil::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(333deg, rgb(31, 3, 104) 55%, rgb(255, 127, 17) 99%);
+    position: absolute;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: 0% 100%;
+    animation: fond 1s 4.9s forwards;
+  }
+  @keyframes fond {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  .introduction {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 450px;
+    top: 100px;
+  }
+  .introduction__phrase {
+    position: relative;
+    width: 45%;
+    height: 100%;
+    color: rgb(31, 3, 104);
+    font-size: 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: couleur_phrases forwards 1s 4.9s;
+    z-index: 2;
+  }
+  @keyframes couleur_phrases {
+    from {
+      color: rgb(31, 3, 104);
+    }
+    to {
+      color: #fff;
+    }
+  }
+  .introduction__phrase--1 {
+    transform: translateX(-115%);
+    animation: phrase_1 0.8s 1.5s forwards;
+  }
+  @keyframes phrase_1 {
+    0% {
+      transform: translateX(-110%);
+      transition-timing-function: ease-out;
+    }
+    80% {
+      transform: translateX(10%);
+      transition-timing-function: ease-in;
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  .introduction__phrase--1__soulignement--1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #FF7F11;
+    width: 24.5%;
+    height: 3px;
+    right: 177px;
+    bottom: 2px;
+    transform-origin: 0% 50%;
+    transform: scale(0);
+    animation: soulignement 1s 6.4s forwards;
+  }
+  .introduction__phrase--1__soulignement--2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #FF7F11;
+    width: 32.5%;
+    height: 3px;
+    right: 0px;
+    bottom: 2px;
+    transform-origin: 0% 50%;
+    transform: scale(0);
+    animation: soulignement 1s 6.4s forwards;
+  }
+  .introduction__phrase--2 {
+    transform: scale(0);
+    animation: phrase_2 0.8s 2.3s forwards;
+  }
+  @keyframes phrase_2 {
+    0% {
+      transform: scale(0);
+      transition-timing-function: ease-out;
+    }
+    80% {
+      transform: scale(1.2);
+      transition-timing-function: ease-in;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .introduction__phrase--2__soulignement::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #FF7F11;
+    width: 42.5%;
+    height: 3px;
+    right: 0px;
+    bottom: 2px;
+    transform-origin: 100% 50%;
+    transform: scale(0);
+    animation: soulignement 1s 6.9s forwards;
+  }
+  @keyframes soulignement {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  .introduction__phrase--3 {
+    font-size: 40px;
+  }
+  .introduction__phrase--3 > .introduction__phrase--3--1 {
+    opacity: 0;
+    animation: phrase_3 0.5s 3.1s forwards;
+  }
+  .introduction__phrase--3 > .introduction__phrase--3--2 {
+    opacity: 0;
+    animation: phrase_3 0.5s 3.6s forwards;
+  }
+  .introduction__phrase--3 > .introduction__phrase--3--3 {
+    opacity: 0;
+    animation: phrase_3 0.5s 4.1s forwards;
+  }
+  .introduction__phrase--3 > .introduction__phrase--3--4 {
+    opacity: 0;
+    animation: phrase_3 0.5s 4.6s forwards;
+  }
+  .introduction__phrase--3 > .introduction__phrase--3--5 {
+    opacity: 0;
+    animation: phrase_3 0.5s 5.1s forwards;
+  }
+  @keyframes phrase_3 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .introduction__phrase > h2 {
+    font-weight: 100;
+  }
+  .introduction__image {
+    z-index: 2;
+    transform: scale(0);
+    width: 45%;
+    height: 100%;
+    animation: image 0.5s 5.9s forwards;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  .introduction__image > img {
+    position: absolute;
+  }
+  @keyframes image {
+    0% {
+      transform: scale(0);
+      transition-timing-function: ease-out;
+    }
+    80% {
+      transform: scale(1.2);
+      transition-timing-function: ease-in;
+    }
+    100% {
+      transform: scale(1);
     }
   }
   .header {
@@ -186,205 +386,6 @@
   section > h1, section > h2 {
     color: rgb(31, 3, 104);
   }
-  .accueil {
-    position: absolute;
-    top: 0px;
-    width: 102%;
-    height: 577px;
-    background-color: white;
-    left: 0px;
-  }
-  .accueil::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(333deg, rgb(31, 3, 104) 55%, rgb(255, 127, 17) 99%);
-    position: absolute;
-    z-index: 1;
-    transform: scaleX(0);
-    transform-origin: 0% 100%;
-    animation: fond 1s 4.9s forwards;
-  }
-  @keyframes fond {
-    from {
-      transform: scaleX(0);
-    }
-    to {
-      transform: scaleX(1);
-    }
-  }
-  .introduction {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 450px;
-    top: 100px;
-  }
-  .introduction__phrase {
-    position: relative;
-    width: 45%;
-    height: 100%;
-    color: rgb(31, 3, 104);
-    font-size: 25px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: couleur_phrases forwards 1s 4.9s;
-    z-index: 2;
-  }
-  @keyframes couleur_phrases {
-    from {
-      color: rgb(31, 3, 104);
-    }
-    to {
-      color: #fff;
-    }
-  }
-  .introduction__phrase--1 {
-    transform: translateX(-115%);
-    animation: phrase_1 0.8s 1.3s forwards;
-  }
-  @keyframes phrase_1 {
-    0% {
-      transform: translateX(-110%);
-      transition-timing-function: ease-out;
-    }
-    80% {
-      transform: translateX(10%);
-      transition-timing-function: ease-in;
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-  .introduction__phrase--1__soulignement--1::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: #FF7F11;
-    width: 24.5%;
-    height: 3px;
-    right: 177px;
-    bottom: 2px;
-    transform-origin: 0% 50%;
-    transform: scale(0);
-    animation: soulignement 1s 6.4s forwards;
-  }
-  .introduction__phrase--1__soulignement--2::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: #FF7F11;
-    width: 32.5%;
-    height: 3px;
-    right: 0px;
-    bottom: 2px;
-    transform-origin: 0% 50%;
-    transform: scale(0);
-    animation: soulignement 1s 6.4s forwards;
-  }
-  .introduction__phrase--2 {
-    transform: scale(0);
-    animation: phrase_2 0.8s 2.1s forwards;
-  }
-  @keyframes phrase_2 {
-    0% {
-      transform: scale(0);
-      transition-timing-function: ease-out;
-    }
-    80% {
-      transform: scale(1.2);
-      transition-timing-function: ease-in;
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  .introduction__phrase--2__soulignement::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: #FF7F11;
-    width: 42.5%;
-    height: 3px;
-    right: 0px;
-    bottom: 2px;
-    transform-origin: 100% 50%;
-    transform: scale(0);
-    animation: soulignement 1s 6.9s forwards;
-  }
-  @keyframes soulignement {
-    from {
-      transform: scale(0);
-    }
-    to {
-      transform: scale(1);
-    }
-  }
-  .introduction__phrase--3 {
-    font-size: 40px;
-  }
-  .introduction__phrase--3 > .introduction__phrase--3--1 {
-    opacity: 0;
-    animation: phrase_3 0.5s 2.9s forwards;
-  }
-  .introduction__phrase--3 > .introduction__phrase--3--2 {
-    opacity: 0;
-    animation: phrase_3 0.5s 3.4s forwards;
-  }
-  .introduction__phrase--3 > .introduction__phrase--3--3 {
-    opacity: 0;
-    animation: phrase_3 0.5s 3.9s forwards;
-  }
-  .introduction__phrase--3 > .introduction__phrase--3--4 {
-    opacity: 0;
-    animation: phrase_3 0.5s 4.4s forwards;
-  }
-  .introduction__phrase--3 > .introduction__phrase--3--5 {
-    opacity: 0;
-    animation: phrase_3 0.5s 4.9s forwards;
-  }
-  @keyframes phrase_3 {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .introduction__phrase > h2 {
-    font-weight: 100;
-  }
-  .introduction__image {
-    z-index: 2;
-    transform: scale(0);
-    width: 45%;
-    height: 100%;
-    animation: image 0.5s 5.9s forwards;
-    overflow: hidden;
-    border-radius: 20px;
-  }
-  .introduction__image > img {
-    position: absolute;
-  }
-  @keyframes image {
-    0% {
-      transform: scale(0);
-      transition-timing-function: ease-out;
-    }
-    80% {
-      transform: scale(1.2);
-      transition-timing-function: ease-in;
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
   main {
     width: 100%;
     background-image: url("../document/image/fond_site.JPG");
@@ -403,7 +404,7 @@
     text-decoration: underline #FF7F11;
   }
   .a_propos_de_moi {
-    top: 350px;
+    top: 650px;
     width: 100%;
     position: relative;
     padding-bottom: 60px;
@@ -469,7 +470,7 @@
     transform: scaleX(1);
   }
   .mes_experiences {
-    top: 510px;
+    top: 810px;
     width: 100%;
     height: 900px;
     position: relative;
@@ -600,11 +601,10 @@
     height: 500px;
     width: 100%;
     position: relative;
-    top: 600px;
+    top: 970px;
   }
   .veille_technologique__contenu {
     position: relative;
-    top: 5%;
     width: 100%;
     height: 100px;
   }
@@ -893,7 +893,7 @@
     height: 60%;
     right: 10px;
     position: relative;
-    top: 800px;
+    top: 1200px;
   }
   .me_contacter > h1 {
     font-weight: 100;
