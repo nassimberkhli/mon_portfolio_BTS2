@@ -3,7 +3,7 @@
     color: white;
   }
   .header::after {
-    content: "Mon portfolio est disponible seulement en format ordinateur, ll sera disponible sur ce type de format prochainement";
+    content: "Mon portfolio est disponible seulement en format ordinateur large, ll sera disponible sur ce type de format prochainement";
     background-color: #B61E16;
     display: block;
     height: 50px;
@@ -12,10 +12,10 @@
     opacity: 0;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1200px) {
   html {
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: visible;
     animation: scroll 0s 9s forwards;
   }
   @keyframes scroll {
@@ -31,14 +31,11 @@
     width: 100%;
   }
   body::-webkit-scrollbar {
-    width: 12px; /* width of the entire scrollbar */
-    border-radius: 20px;
-  }
-  body::-webkit-scrollbar-track {
-    background-color: white; /* color of the tracking area */
+    width: 6px; /* width of the entire scrollbar */
   }
   body::-webkit-scrollbar-thumb {
-    background: linear-gradient(175deg, rgb(255, 223, 190) 30%, rgb(255, 132, 0) 70%); /* color of the scroll thumb */
+    background-color: #FF7F11;
+    border-radius: 20px;
   }
   .animation_introduction {
     padding-bottom: 150px;
@@ -159,7 +156,7 @@
       transition-timing-function: ease-in;
     }
     100% {
-      transform: scale(.7);
+      transform: scale(0.7);
     }
   }
   .bouton__ouvrir_entete:hover {
@@ -192,10 +189,10 @@
   .accueil {
     position: absolute;
     top: 0px;
-    width: 100%;
+    width: 102%;
     height: 577px;
-    left: 0px;
     background-color: white;
+    left: 0px;
   }
   .accueil::before {
     content: "";
@@ -398,7 +395,7 @@
     width: 100%;
     position: relative;
     background-position-x: left;
-    background: radial-gradient(circle, white 37.4%, #FF7F11 38%, white 38.6%);
+    background: radial-gradient(circle, transparent 37.4%, #FF7F11 38%, transparent 38.6%);
   }
   section > h1 {
     font-weight: 100;
@@ -522,6 +519,7 @@
     height: 100%;
     font-family: Georgia, "Times New Roman", Times, serif;
     color: white;
+    background-color: rgb(31, 3, 104);
     transform: translateY(103%);
     transition: 0.5s;
   }
@@ -891,8 +889,9 @@
     transform: scale(1);
   }
   .me_contacter {
-    width: 100%;
+    width: 105%;
     height: 60%;
+    right: 10px;
     position: relative;
     top: 800px;
   }
@@ -911,7 +910,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-/*     border-radius: 20px; */
   }
   .me_contacter__contenu__info {
     display: flex;
