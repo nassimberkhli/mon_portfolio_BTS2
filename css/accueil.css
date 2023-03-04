@@ -21,7 +21,7 @@
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
     animation: scroll 0s 8.5s forwards;
   }
   @keyframes scroll {
