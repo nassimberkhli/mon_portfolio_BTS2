@@ -4,8 +4,8 @@
   }
   .header::after {
     content: "Mon portfolio est disponible seulement en format ordinateur large, ll sera disponible sur ce type de format prochainement";
-    color: rgb(31, 3, 104);
-    text-decoration: underline rgb(85, 18, 255);
+    color: #1f0368;
+    text-decoration: underline #5512ff;
     display: block;
     height: 100%;
     text-align: center;
@@ -21,7 +21,7 @@
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: visible;
     animation: scroll 0s 4.5s forwards;
   }
   @keyframes scroll {
@@ -60,7 +60,7 @@
     width: 6px; /* width of the entire scrollbar */
   }
   body::-webkit-scrollbar-thumb {
-    background-color: rgb(85, 18, 255);
+    background-color: #5512ff;
     border-radius: 20px;
   }
   .header {
@@ -79,7 +79,7 @@
     transform: translateY(0%);
   }
   .header > a {
-    color: rgb(31, 3, 104);
+    color: #1f0368;
     text-decoration: none;
     font-size: 25px;
     transition: 10ms;
@@ -164,7 +164,7 @@
     width: 40px;
     height: 40px;
     border: white solid 2px;
-    background-color: rgb(31, 3, 104);
+    background-color: #1f0368;
     border-radius: 50px;
     z-index: 12;
     display: flex;
@@ -204,7 +204,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: linear-gradient(333deg, rgb(31, 3, 104) 55%, rgb(85, 18, 255) 99%);
+    background: linear-gradient(333deg, #1f0368 55%, #5512ff 99%);
     position: absolute;
     z-index: 1;
     transform: scale(0, 0);
@@ -225,7 +225,7 @@
     transform: scale(0);
     animation: lancement_bonjour 1s 0.5s;
     font-family: Georgia, "Times New Roman", Times, serif;
-    color: rgb(31, 3, 104);
+    color: #1f0368;
     z-index: 2;
     font-size: 100px;
     text-align: center;
@@ -252,12 +252,13 @@
     width: 100%;
     height: 450px;
     top: 100px;
+    left: 5%;
   }
   .introduction__phrase {
     position: relative;
     width: 45%;
     height: 100%;
-    color: rgb(31, 3, 104);
+    color: #1f0368;
     font-size: 25px;
     display: flex;
     flex-direction: column;
@@ -268,7 +269,7 @@
   }
   @keyframes couleur_phrases {
     from {
-      color: rgb(31, 3, 104);
+      color: #1f0368;
     }
     to {
       color: #fff;
@@ -299,7 +300,7 @@
     position: absolute;
     background-color: #FF7F11;
     width: 24.5%;
-    height: 3px;
+    height: 2px;
     right: 177px;
     bottom: 2px;
     transform-origin: 100% 50%;
@@ -312,7 +313,7 @@
     position: absolute;
     background-color: #FF7F11;
     width: 32.5%;
-    height: 3px;
+    height: 2px;
     right: 0px;
     bottom: 2px;
     transform-origin: 100% 50%;
@@ -343,9 +344,10 @@
     display: block;
     position: absolute;
     background-color: #FF7F11;
-    width: 42.5%;
-    height: 3px;
+    width: 57%;
+    height: 2px;
     right: 0px;
+    z-index: -1;
     bottom: 2px;
     transform-origin: 100% 50%;
     transform: scale(0);
@@ -394,13 +396,17 @@
     font-weight: 100;
   }
   .introduction__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     right: 2.5%;
     z-index: 2;
     transform: translateX(30%);
     opacity: 0;
-    width: 45%;
-    height: 100%;
+    width: 55%;
+    height: 120%;
     animation: image 1.5s 1.5s forwards;
     overflow: hidden;
     border-radius: 300px;
@@ -994,7 +1000,7 @@
     font-weight: 100;
     font-size: 35px;
     text-decoration: underline #FF7F11;
-    color: rgb(31, 3, 104);
+    color: #1f0368;
     z-index: 3;
     position: relative;
   }
@@ -1007,7 +1013,7 @@
     content: "";
     width: 70%;
     height: 70%;
-    border: rgb(85, 18, 255) double 10px;
+    border: #5512ff double 10px;
     border-spacing: 35px;
     display: block;
     position: absolute;
@@ -1017,7 +1023,7 @@
     border-radius: 500px;
     background-color: #ffffff;
     opacity: 1;
-    background-image: radial-gradient(rgb(85, 18, 255) 0.6px, transparent 0.6px), radial-gradient(rgb(85, 18, 255) 0.6px, #ffffff 0.6px);
+    background-image: radial-gradient(#5512ff 0.6px, transparent 0.6px), radial-gradient(#5512ff 0.6px, #ffffff 0.6px);
     background-size: 24px 24px;
     background-position: 0 0, 12px 12px;
   }
@@ -1033,7 +1039,7 @@
   }
   .a_propos_de_moi__contenu__paragraphe {
     color: white;
-    background-color: rgb(31, 3, 104);
+    background-color: #1f0368;
     padding: 0px 20px 0px 20px;
     border-radius: 13px;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
@@ -1045,9 +1051,9 @@
     position: relative;
     width: 250px;
     height: 200px;
-    border: rgb(31, 3, 104) solid 2px;
+    border: #1f0368 solid 2px;
     font-family: Georgia, "Times New Roman", Times, serif;
-    color: rgb(31, 3, 104);
+    color: #1f0368;
     font-size: 30px;
     display: flex;
     flex-direction: column;
@@ -1061,7 +1067,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background-color: rgb(31, 3, 104);
+    background-color: #1f0368;
     background: #fff;
     position: absolute;
     top: 0px;
@@ -1073,7 +1079,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    background-color: rgb(31, 3, 104);
+    background-color: #1f0368;
     opacity: 1;
     color: white;
     position: absolute;
@@ -1101,16 +1107,16 @@
     align-items: center;
     overflow: hidden;
     z-index: 2;
-    color: rgb(31, 3, 104);
+    color: #1f0368;
     background-color: #ffffff;
     opacity: 1;
-    background-image: radial-gradient(rgb(85, 18, 255) 0.6px, transparent 0.6px), radial-gradient(rgb(85, 18, 255) 0.6px, #ffffff 0.6px);
+    background-image: radial-gradient(#5512ff 0.6px, transparent 0.6px), radial-gradient(#5512ff 0.6px, #ffffff 0.6px);
     background-size: 24px 24px;
     background-position: 0 0, 12px 12px;
   }
   .mes_experiences > h1 {
     z-index: 2;
-    color: rgb(31, 3, 104);
+    color: #1f0368;
     position: relative;
   }
   .mes_experiences__carre {
@@ -1137,10 +1143,10 @@
     font-size: 26px;
     letter-spacing: 15px;
     z-index: 2;
-    color: rgb(31, 3, 104);
+    color: #1f0368;
     position: relative;
     top: 20px;
-    color: rgb(31, 3, 104);
+    color: #1f0368;
   }
   .mes_experiences__type__generale {
     z-index: 3;
@@ -1182,7 +1188,7 @@
     font-family: Georgia, "Times New Roman", Times, serif;
     transform: translateY(103%);
     transition: 0.5s;
-    background-color: rgb(31, 3, 104);
+    background-color: #1f0368;
   }
   .mes_experiences__type__generale__liste__tout > div > div {
     cursor: pointer;
@@ -1312,7 +1318,7 @@
     content: "";
     width: 80%;
     height: 70%;
-    border: rgb(85, 18, 255) double 10px;
+    border: #5512ff double 10px;
     border-spacing: 35px;
     display: block;
     position: absolute;
@@ -1322,7 +1328,7 @@
     border-radius: 500px;
     background-color: #ffffff;
     opacity: 1;
-    background-image: radial-gradient(rgb(85, 18, 255) 0.6px, transparent 0.6px), radial-gradient(rgb(85, 18, 255) 0.6px, #ffffff 0.6px);
+    background-image: radial-gradient(#5512ff 0.6px, transparent 0.6px), radial-gradient(#5512ff 0.6px, #ffffff 0.6px);
     background-size: 24px 24px;
     background-position: 0 0, 12px 12px;
   }
@@ -1357,7 +1363,7 @@
   }
   .veille_technologique__contenu__definition__texte {
     color: white;
-    background-color: rgb(31, 3, 104);
+    background-color: #1f0368;
     padding: 0px 20px 0px 20px;
     border-radius: 13px;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
@@ -1389,7 +1395,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgb(31, 3, 104);
+    background-color: #1f0368;
     width: 50px;
     height: 50px;
     border-radius: 50px;
@@ -1417,7 +1423,7 @@
     font-family: Georgia, "Times New Roman", Times, serif;
     position: relative;
     font-size: 22px;
-    color: rgb(31, 3, 104);
+    color: #1f0368;
     right: 30px;
     transition-delay: 0.2s;
     z-index: 2;
@@ -1426,7 +1432,7 @@
     z-index: 1;
     display: block;
     position: absolute;
-    background-color: rgb(31, 3, 104);
+    background-color: #1f0368;
     width: 100%;
     height: 50px;
     border-radius: 50px;
@@ -1454,7 +1460,7 @@
     top: 0%;
     left: 3%;
     background-color: rgb(245, 245, 245);
-    color: rgb(31, 3, 104);
+    color: #1f0368;
     transform: scale(0);
     transition: 0.5s;
     display: flex;
@@ -1482,7 +1488,7 @@
   .veille_technologique__contenu__cours__croix::after {
     content: "";
     display: block;
-    background-color: rgb(31, 3, 104);
+    background-color: #1f0368;
     width: 100%;
     height: 10%;
     position: absolute;
@@ -1491,7 +1497,7 @@
   .veille_technologique__contenu__cours__croix::before {
     content: "";
     display: block;
-    background-color: rgb(31, 3, 104);
+    background-color: #1f0368;
     width: 10%;
     height: 100%;
     position: absolute;
@@ -1514,8 +1520,8 @@
   }
   .veille_technologique__contenu__cours__contenu__texte > p > a {
     font-style: oblique;
-    color: rgb(85, 18, 255);
-    text-decoration: underline rgb(85, 18, 255);
+    color: #5512ff;
+    text-decoration: underline #5512ff;
   }
   .veille_technologique__contenu__cours__contenu__texte > p > a:hover {
     text-decoration: none;
@@ -1551,8 +1557,8 @@
   }
   .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_1__cours__contenu__image__info > a {
     font-style: oblique;
-    color: rgb(85, 18, 255);
-    text-decoration: underline rgb(85, 18, 255);
+    color: #5512ff;
+    text-decoration: underline #5512ff;
   }
   .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_1__cours__contenu__image__info > a:hover {
     text-decoration: none;
@@ -1585,8 +1591,8 @@
   }
   .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_2__cours__contenu__image__info > a {
     font-style: oblique;
-    color: rgb(85, 18, 255);
-    text-decoration: underline rgb(85, 18, 255);
+    color: #5512ff;
+    text-decoration: underline #5512ff;
   }
   .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_2__cours__contenu__image__info > a:hover {
     text-decoration: none;
@@ -1598,7 +1604,7 @@
     list-style: none;
   }
   .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__cours__contenu__partie_3__texte > a {
-    color: rgb(31, 3, 104);
+    color: #1f0368;
     text-decoration: none;
     font-size: 26px;
     font-weight: 700;
@@ -1608,7 +1614,7 @@
     display: block;
     width: 100px;
     height: 5px;
-    background-color: rgb(85, 18, 255);
+    background-color: #5512ff;
     position: absolute;
     bottom: 25px;
     left: 46%;
@@ -1628,7 +1634,7 @@
     z-index: 2;
   }
   .me_contacter__contenu {
-    background: linear-gradient(513deg, rgb(31, 3, 104) 55%, rgb(85, 18, 255) 99%);
+    background: linear-gradient(513deg, #1f0368 55%, #5512ff 99%);
     width: 100%;
     height: 100%;
     display: flex;
@@ -1750,7 +1756,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background-color: rgb(85, 18, 255);
+    background-color: #5512ff;
     display: block;
     position: absolute;
     z-index: 1;
