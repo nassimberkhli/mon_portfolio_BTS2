@@ -270,10 +270,10 @@
       opacity: 1;
     }
   }
-  .introduction__phrase--1__soulignement--1 {
+  .introduction__phrase__soulignement{
     position: relative;
   }
-  .introduction__phrase--1__soulignement--1::after {
+  .introduction__phrase__soulignement::after {
     content: "";
     display: block;
     position: absolute;
@@ -281,22 +281,6 @@
     width: 100%;
     right: 0PX;
     height: 2px;
-    bottom: 2px;
-    transform-origin: 100% 50%;
-    transform: scale(0);
-    animation: soulignement 1.5s 1.5s forwards;
-  }
-  .introduction__phrase--1__soulignement--2 {
-    position: relative;
-  }
-  .introduction__phrase--1__soulignement--2::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: #43e8e1;
-    width: 100%;
-    height: 2px;
-    right: 0px;
     bottom: 2px;
     transform-origin: 100% 50%;
     transform: scale(0);
@@ -320,23 +304,6 @@
       transform: translateY(0%);
       opacity: 1;
     }
-  }
-  .introduction__phrase--2__soulignement {
-    position: relative;
-  }
-  .introduction__phrase--2__soulignement::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: #43e8e1;
-    width: 100%;
-    height: 2px;
-    right: 0px;
-    z-index: -1;
-    bottom: 2px;
-    transform-origin: 100% 50%;
-    transform: scale(0);
-    animation: soulignement 1.5s 1.5s forwards;
   }
   @keyframes soulignement {
     from {
