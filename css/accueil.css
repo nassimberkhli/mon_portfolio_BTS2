@@ -270,7 +270,8 @@
       opacity: 1;
     }
   }
-  .introduction__phrase__soulignement{
+  .introduction__phrase__soulignement
+{
     position: relative;
   }
   .introduction__phrase__soulignement::after {
