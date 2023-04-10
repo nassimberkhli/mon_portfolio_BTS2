@@ -277,6 +277,7 @@
   .introduction__phrase__soulignement::after {
     content: "";
     display: block;
+    z-index: -1;
     position: absolute;
     background-color: #FF7F11;
     width: 100%;
