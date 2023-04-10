@@ -1,20 +1,20 @@
-document.addEventListener
-(
-    'DOMContentLoaded', 
-    function()
-    {
-        $(document).ready
-        (
-            function()
-            {
-                $('html, body').animate
-                (
-                    {scrollTop: '0px'},500
-                );
-            }
-        )
-    }
-);
+// document.addEventListener
+// (
+//     'DOMContentLoaded', 
+//     function()
+//     {
+//         $(document).ready
+//         (
+//             function()
+//             {
+//                 $('html, body').animate
+//                 (
+//                     {scrollTop: '0px'},500
+//                 );
+//             }
+//         )
+//     }
+// );
 
 $(document).ready
 (
