@@ -91,7 +91,7 @@
   }
   .header > a::after {
     content: "";
-    background-color: #43e8e1;
+    background-color: #FF7F11;
     z-index: -1;
     transition: transform 1s;
     margin-top: 30px;
@@ -100,7 +100,7 @@
   }
   .header__ligne {
     position: absolute;
-    background-color: #43e8e1;
+    background-color: #FF7F11;
     height: 4px;
     width: 100%;
     bottom: 0px;
@@ -129,7 +129,7 @@
     height: 40px;
     border: white solid 2px;
     border-radius: 50px;
-    background-color: #43e8e1;
+    background-color: #FF7F11;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -278,7 +278,7 @@
     content: "";
     display: block;
     position: absolute;
-    background-color: #43e8e1;
+    background-color: #FF7F11;
     width: 100%;
     right: 0PX;
     height: 2px;
@@ -952,7 +952,7 @@
   section > h1 {
     font-weight: 100;
     font-size: 35px;
-    text-decoration: underline #43e8e1;
+    text-decoration: underline #FF7F11;
     color: #1a0f5d;
     z-index: 3;
     position: relative;
@@ -1079,7 +1079,7 @@
     transform: rotate(45deg);
     border-radius: 100000px;
     top: 5%;
-    border: dotted #43e8e1 30px;
+    border: dotted #FF7F11 30px;
     z-index: 0;
     opacity: 0.8;
     animation: rotation_carre 115s infinite linear;
