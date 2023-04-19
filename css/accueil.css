@@ -270,19 +270,33 @@
       opacity: 1;
     }
   }
-  .introduction__phrase__soulignement
-{
+  .introduction__phrase--1__soulignement--1 {
     position: relative;
   }
-  .introduction__phrase__soulignement::after {
+  .introduction__phrase--1__soulignement--1::after {
     content: "";
     display: block;
-    z-index: -1;
     position: absolute;
     background-color: #FF7F11;
     width: 100%;
     right: 0PX;
     height: 2px;
+    bottom: 2px;
+    transform-origin: 100% 50%;
+    transform: scale(0);
+    animation: soulignement 1.5s 1.5s forwards;
+  }
+  .introduction__phrase--1__soulignement--2 {
+    position: relative;
+  }
+  .introduction__phrase--1__soulignement--2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #FF7F11;
+    width: 100%;
+    height: 2px;
+    right: 0px;
     bottom: 2px;
     transform-origin: 100% 50%;
     transform: scale(0);
@@ -306,6 +320,23 @@
       transform: translateY(0%);
       opacity: 1;
     }
+  }
+  .introduction__phrase--2__soulignement {
+    position: relative;
+  }
+  .introduction__phrase--2__soulignement::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #FF7F11;
+    width: 100%;
+    height: 2px;
+    right: 0px;
+    z-index: -1;
+    bottom: 2px;
+    transform-origin: 100% 50%;
+    transform: scale(0);
+    animation: soulignement 1.5s 1.5s forwards;
   }
   @keyframes soulignement {
     from {
@@ -1261,7 +1292,7 @@
     font-size: 80px;
     color: #fff;
     -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: hsl(231deg, 50%, 29%);
+    -webkit-text-stroke-color: hwb(231 15% 56%);
   }
   .veille_technologique {
     height: 500px;
@@ -1475,10 +1506,24 @@
   .veille_technologique__contenu__cours__contenu__texte > p > a {
     font-style: oblique;
     color: #5512ff;
-    text-decoration: underline #5512ff;
-  }
-  .veille_technologique__contenu__cours__contenu__texte > p > a:hover {
+    position: relative;
     text-decoration: none;
+  }
+  .veille_technologique__contenu__cours__contenu__texte > p > a:hover::after {
+    transform: scaleX(0);
+  }
+  .veille_technologique__contenu__cours__contenu__texte > p > a::after {
+    content: "";
+    display: block;
+    background-color: #5512ff;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+    transition: 0.2s;
   }
   .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__cours__contenu__image {
     font-size: 15px;
@@ -1512,10 +1557,24 @@
   .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_1__cours__contenu__image__info > a {
     font-style: oblique;
     color: #5512ff;
-    text-decoration: underline #5512ff;
-  }
-  .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_1__cours__contenu__image__info > a:hover {
+    position: relative;
     text-decoration: none;
+  }
+  .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_1__cours__contenu__image__info > a:hover::after {
+    transform: scaleX(0);
+  }
+  .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_1__cours__contenu__image__info > a::after {
+    content: "";
+    display: block;
+    background-color: #5512ff;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+    transition: 0.2s;
   }
   .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_2__cours__contenu__image {
     width: 30%;
@@ -1546,16 +1605,27 @@
   .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_2__cours__contenu__image__info > a {
     font-style: oblique;
     color: #5512ff;
-    text-decoration: underline #5512ff;
-  }
-  .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_2__cours__contenu__image__info > a:hover {
+    position: relative;
     text-decoration: none;
+  }
+  .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_2__cours__contenu__image__info > a:hover::after {
+    transform: scaleX(0);
+  }
+  .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__partie_2__cours__contenu__image__info > a::after {
+    content: "";
+    display: block;
+    background-color: #5512ff;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+    transition: 0.2s;
   }
   .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__cours__contenu__partie_3__texte {
     margin-right: 30%;
-  }
-  .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__cours__contenu__partie_3__texte li {
-    list-style: none;
   }
   .veille_technologique__contenu__cours__contenu .veille_technologique__contenu__cours__contenu__partie_3__texte > a {
     color: #1a0f5d;
